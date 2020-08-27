@@ -25,7 +25,7 @@ shared_buffers = 25%/90% of Total RAM or an 8GB.
 ```
 
 How to check that parameter set correctly?
-* Using "pg_buffercache":https://www.postgresql.org/docs/current/pgbuffercache.html extension.
+* Using [pg_buffercache](https://www.postgresql.org/docs/current/pgbuffercache.html) extension.
 * Check query blocks using pg_stat_statements
 * Views: pg_statio_user_tables and pg_statio_user_indexs.
 * EXPLAIN (ANALYZE,BUFFERS) query.
@@ -342,7 +342,7 @@ wal_compression = on
 * Set the parameters of log lines.
 
 How to set it correctly?
-* Must set this parameter to [PgBadger]:https://pgbadger.darold.net/ requirements.
+* Must set this parameter to [PgBadger](https://pgbadger.darold.net/) requirements.
 
 The unique format for this is:
 ```
@@ -401,7 +401,7 @@ log_autovacuum_min_duration = 0
 
 ## log_min_duration_statement
 
-* Needed on to be checked with pgBadger.
+* Causes the duration of each completed statement to be logged if the statement ran for at least the specified amount of time.
 
 A valid value is:
 ```
@@ -421,3 +421,4 @@ log_rotation_age = 1d
 # Sources
 * https://www.percona.com/live/e18/sites/default/files/slides/High%20Performance%20PostgreSQL,%20Tuning%20and%20Optimization%20Guide%20-%20FileId%20-%20160682.pdf
 * https://www.percona.com/resources/videos/mostly-mistaken-and-ignored-parameters-while-optimizing-postgresql-database-percona
+* https://postgresql.org
