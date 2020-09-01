@@ -351,7 +351,7 @@ log_line_prefix = '%t [%p]: [%l-l] %quser=%u,db=%d,app=%a,client=%h '
 
 ## log_checkpoints
 
-* Needed on to be checked with pgBadger.
+* Needed to set on to be checked with pgBadger.
 
 A valid value is:
 ```
@@ -365,7 +365,7 @@ log_connections = on
 
 ## log_disconnections
 
-* Needed on to be checked with pgBadger.
+* Needed to set on to be checked with pgBadger.
 
 A valid value is:
 ```
@@ -374,7 +374,7 @@ log_disconnections = on
 
 ## log_lock_waits
 
-* Needed on to be checked with pgBadger.
+* Needed to set on to be checked with pgBadger.
 
 A valid value is:
 ```
@@ -383,7 +383,7 @@ log_lock_waits = on
 
 ## log_temp_files
 
-* Needed on to be checked with pgBadger.
+* Needed to set on to be checked with pgBadger.
 
 A valid value is:
 ```
@@ -392,7 +392,7 @@ log_temp_files = 0
 
 ## log_autovacuum_min_duration
 
-* Needed on to be checked with pgBadger.
+* Needed to set on to be checked with pgBadger.
 
 A valid value is:
 ```
@@ -402,11 +402,13 @@ log_autovacuum_min_duration = 0
 ## log_min_duration_statement
 
 * Causes the duration of each completed statement to be logged if the statement ran for at least the specified amount of time.
+* If this value is specified without units, it is taken as milliseconds.
 
 A valid value is:
 ```
 log_min_duration_statement = 30
 ```
+If you want log all queries, set it to 0.
 
 ## log_rotation_age
 
